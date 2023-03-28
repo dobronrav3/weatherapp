@@ -1,0 +1,129 @@
+@import url("base.css");
+html{
+
+    background:url('../img/img2.jpg') no-repeat center center;
+    min-height:100%;
+    background-size:cover;
+}
+.parent {
+    float: center;
+    margin-left: 126px;
+}
+
+.element {
+    float: left;
+    margin-right: 30px;
+    margin-bottom: 50px;
+    border: 2px solid;
+    color: #F0E68C;
+    text-align: center;
+    font-family: "Andale Mono", AndaleMono, monospace;
+    font-size:10px;
+    list-style-type: none;
+    background: rgb(130,144,190);
+    background: radial-gradient(circle, rgba(130,144,190,0.773546918767507) 0%, rgba(127,141,187,0.8) 50%, rgba(142,155,226,0.8) 100%);
+    width: 230px;
+    height: 150px;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.element h1 {
+    color: #ba1414;
+}
+
+.bblock {
+    margin-right: 30px;
+    margin-bottom: 50px;
+    color: #ba1414;
+    text-align: center;
+    font-family: "Andale Mono", AndaleMono, monospace;
+    font-size: 15px;
+    list-style-type: none;
+    background: rgb(130,144,190);
+    background: radial-gradient(circle, rgba(130,144,190,0.773546918767507) 0%, rgba(127,141,187,0.8) 50%, rgba(142,155,226,0.8) 100%);
+    width: 360px;
+    height: 135px;
+    border-radius: 20px;
+    padding: 5px;
+
+}
+
+.hour-button {
+  display: active;
+  padding: 5px;
+  margin-right: 30px;
+  margin-bottom: 50px;
+  transition: all 0.4s ease-out, background-color 0.4s;
+  border: 2px solid #F0E68C;
+  border-radius: 10px;
+  outline: none;
+  background: rgb(130,144,190);
+  background: radial-gradient(circle, rgba(130,144,190,0.773546918767507) 0%, rgba(127,141,187,0.8) 50%, rgba(142,155,226,0.8) 100%);
+  width: 385px;
+  height: 160px;
+}
+
+.hour-button:hover {
+  transition: all 0.4s ease-out;
+  transform: scale(1.03, 1.03);
+  background: #F0E68C;
+  box-shadow: rgba(255, 255, 255, 0.3) 0 0 16px 2px;
+}
+
+
+
+body p {
+    color: #F0E68C;
+    text-align: center;
+    font-family: "Andale Mono", AndaleMono, monospace;
+    font-size:20px;
+
+}
+
+h2 {
+    color: #000080;
+    background-color: White;
+    border-radius: 10px;
+    margin: 2rem auto;
+    padding: 5px;
+    width: 450px;
+    text-align: center;
+    font-family: "Courier New", Courier New, monospace;
+    font-size:50px;
+
+}
+form {
+    padding: 5px;
+    border-radius:15px;
+}
+
+#back button {
+  margin-left: 45%;
+  margin-right: 45%;
+  width: 10%;
+  padding: 6px 6px;
+  transition: all 0.4s ease-out, background-color 0.4s;
+  color: #fff;
+  border: 2px solid #F0E68C;
+  border-radius: 5px;
+  outline: none;
+  text-transform: uppercase;
+  background: rgba(0, 0, 0, 0);
+  background-clip: border-box;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+#back button:hover {
+  transition: all 0.3s ease-out;
+  background: #BC8F8F;
+  transform: scale(1.05, 1.05);
+  box-shadow: rgba(255, 255, 255, 0.3) 0 0 16px 2px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}

@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+
+
+<html>
+  <head>
+    <title>Прогноз на 10 дней</title>
+    <link rel="stylesheet" href="{% static 'weatherapp/css/get_info.css' %}" type="text/css" />
+    <link rel="website icon" href="../../static/weatherapp/img/favicon-32x32.png">
+
+  </head>
+  <body>
+    {% include 'includes/navbar.html' %}
+    <div class="wrapper">
+        <div class="content">
+                <form method="POST" class="main"> {% csrf_token %}
+                    <p>
+                    <input type="text" placeholder="Название города" name="city" required/>
+                    </p><br><br>
+                    <button id="search" class="blubtn" type="submit">Поиск</button>
+                </form>
+            <h2>{{ city }}</h2>
+            <div class="parent">
+                {% for elem in days %}
+                <button class="hour-button"><a href="forecast/{{ elem.num }}">
+                    <div class="bblock">
+                        <h1>Дата: {{ elem.date }}</h1>
+                        <p><img src="{{ elem.day.condition.icon }}" width="50px" />{{ elem.day.condition.text }}</p>
+                        <p>Температура: {{ elem.day.maxtemp_c }}&deg</p>
+                        <p>Порывы ветра до {{ elem.day.maxwind_kph }} км/ч</p>
+                    </div></a></button>
+        {% endfor %}
+      </div>
+        </div>
+        {% include 'includes/footer.html' %}
+    </div>
+  </body>
+</html>

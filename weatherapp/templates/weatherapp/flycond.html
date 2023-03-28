@@ -1,0 +1,65 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Условия полета</title>
+    <link rel="stylesheet" href="{% static 'weatherapp/css/flycond.css' %}" type="text/css" />
+    <link rel="website icon" href="../../static/weatherapp/img/favicon-32x32.png">
+
+</head>
+<body>
+    {% include 'includes/navbar.html' %}<br>
+    <br><br>
+    <form method="POST"> {% csrf_token %}
+      <p>
+        <input type="text" placeholder="Название города" name="city" required/>
+      </p>
+      <br>
+      <br>
+      <button id="search" type="submit">Поиск</button>
+    </form>
+    <div class="wrapper">
+        <div class="content">
+            <div class="main-block">
+                <h1>{{ city }}</h1>
+                <h1>Дата: {{ day }}</h1>
+                <h2><img src="{{ icon }}" width="50px" />{{ description }}</h2>
+                <h2>Температура: {{ temp }}</h2>
+                {% if temp < 0 %}
+                    <p class="neutral">Полеты не рекомендуются. Но если все же собираетесь, следите за температурой аккумуляторов.</p>
+                {% else %}
+                    <p class="good">Температура подходит для полетов.</p>
+                {% endif %}
+                <h2>Видимость: {{ vis }} км.</h2>
+                {% if precip < 0.1 %}
+                    <h2>Осадков нет.</h2>
+                {% else %}
+                    <h2>Осадки {{ precip }} мм</h2>
+                    <p class="bad">Крайне не рекомендуется летать при дожде или снегопаде.</p>
+                {% endif %}
+                <h2>Скорость ветра: {{ wind }} м/с {{ windir }}</h2>
+                <h2>Порывы ветра до {{ gust }} м/с</h2>
+                {% if wind > 10 %}
+                    <p class="bad">Ветер слишком сильный. Полеты крайне не рекомендуются.</p>
+                {% elif gust > 10 %}
+                    <p class="bad">Порывы ветра слишком сильны. Полеты крайне не рекомендуются.</p>
+                {% else %}
+                    <p class="good">Ветер относительно слабый и не препятствует полетам.</p>
+                {% endif %}
+                <h2>Влажность: {{ humidity }}%</h2>
+                {% if humidity > 99 %}
+                    <p class="bad">Не рекомендуются полеты при тумане.</p>
+                {% else %}
+                    <p class="good">Тумана нет, можете летать.</p>
+                {% endif %}
+            </div>
+        </div>
+        {% include 'includes/footer.html' %}
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+@import url("base.css");
+
+html{
+    background:url('../img/drone.png') no-repeat center center;
+    min-height:100%;
+    background-size:cover;
+}
+
+form {
+    text-align: center;
+    margin-top: 35px;
+}
+
+.wrapper {
+    backdrop-filter: blur(3px);
+}
+
+.content {
+    font-family: "Andale Mono", AndaleMono, monospace;
+    text-align: center;
+    background: rgb(202,205,187);
+    background: radial-gradient(circle, rgb(168 122 219 / 81%) 0%, rgb(146 142 230) 50%, rgb(161 151 222 / 82%) 100%);
+    border: 3px solid;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-top: 40px;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+    width: 60%;
+    height: 50%;
+}
+
+.content h1 {
+    font-family: "Courier New", Courier New, monospace;
+    color: #0d1919;
+}
+
+.main-block {
+    margin: auto;
+    color: #0d1919;
+    font-size: calc( (100vw - 480px)/(1280 - 480) * (24 - 16) + 16px);
+}
+
+.content p {
+    font-size: 22px;
+}
+
+.bad {
+    color: #DC143C;
+}
+
+.neutral {
+    color: yellow;
+}
+
+.good {
+    color: #00FF00;
+}
+

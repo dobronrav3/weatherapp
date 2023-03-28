@@ -1,0 +1,51 @@
+@import url("base.css");
+
+html{
+
+    background:url('../img/img2.jpg') no-repeat center center;
+    min-height:100%;
+    background-size:cover;
+}
+
+.content {
+    margin-left: auto;
+    margin-top: 5vh;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+    width: 60%;
+}
+
+#main{
+    color: #480f6d;
+    text-align: center;
+    font-family: "Andale Mono", AndaleMono, monospace;
+    font-size: calc( (100vw - 480px)/(1280 - 480) * (24 - 16) + 16px);
+    line-height: 60px;
+    list-style-type: none;
+    background: rgb(238,238,238);
+    background: radial-gradient(circle, rgba(212,215,227,0.82) 0%, rgba(228,230,233,0.72) 50%, rgba(212,215,231,0.62) 100%);
+    width: auto;
+    max-width: 1000px;
+    border-radius: 10px;
+    margin: 2rem auto;
+    padding: 5px;
+}
+
+body p {
+    color: #800000;
+    text-align: center;
+    font-family: "Andale Mono", AndaleMono, monospace;
+    font-size:20px;
+
+}
+
+form {
+    padding: 5px;
+    border-radius:15px;
+}
+
+a {
+    color: #DC143C;
+}
+

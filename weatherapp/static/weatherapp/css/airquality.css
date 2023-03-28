@@ -1,0 +1,89 @@
+@import url("base.css");
+html{
+
+    background:url('../img/img_airquality.png') no-repeat center center;
+    min-height:100%;
+    background-size:cover;
+    background-attachment: fixed
+}
+
+
+#aqi, #no2, #o3, #pm25, #co, #so2 {
+    color: #006400;
+    text-align: center;
+    font-family: "Andale Mono", AndaleMono, monospace;
+    font-size: calc( (100vw - 480px)/(1280 - 480) * (24 - 16) + 16px);
+    line-height: 40px;
+    list-style-type: none;
+    background-color: #F5F5DC;
+    width: 60vw;
+    border: 3px solid;
+    border-radius: 10px;
+    margin: 2rem auto;
+    padding: 5px;
+}
+
+body p {
+    padding: 10px 50px 20px;
+    color: #2F4F4F;
+    text-align: center;
+    font-family: "Andale Mono", AndaleMono, monospace;
+    font-size: calc( (100vw - 480px)/(1280 - 480) * (24 - 16) + 16px);;
+
+}
+
+body h2 {
+    padding: 10px 50px 20px;
+    color: #A52A2A;
+    text-align: center;
+    font-family: "Andale Mono", AndaleMono, monospace;
+    font-size: 30px;
+}
+
+form {
+    padding: 5px;
+    border-radius:15px;
+}
+
+
+.dropbtn {
+  background-color: #00FF7F;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+.dropdown button{
+  position: center;
+  display: inline-block;
+  font-size: 15px;
+  color: #000080;
+  border-radius: 20px;
+  height:50px;
+  width:107px;
+}
+
+.dropdown-content {
+  display: none;
+  position: center;
+  margin-top: 20px;
+  border-radius: 10px;
+  background-color: #f1f1f1;
+  min-width: 360px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content p {
+  color: #000080;
+  padding: 12px 16px;
+  display: block;
+}
+
+.show {display:block;}

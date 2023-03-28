@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Текущая погода</title>
+    <link rel="website icon" href="../../static/weatherapp/img/favicon-32x32.png">
+    <link rel="stylesheet" href="{% static 'weatherapp/css/index.css' %}" type="text/css" />
+  </head>
+
+  <body>
+    {% include 'includes/navbar.html' %}
+    <div class="wrapper">
+        <div class="content">
+            <div class="forma">
+                <form method="POST" class="main"> {% csrf_token %}
+                    <p>
+                    <input type="text" placeholder="Название города" name="city" required/>
+                    </p><br><br>
+                    <button id="search" class="blubtn" type="submit">Поиск</button>
+                </form>
+            </div>
+            <div id="main">
+                <h1>{{ city }}</h1>
+                <h1>Дата: {{ day }}</h1>
+                <h2><img src="{{ icon }}" width="70px" />{{ description }}</h2>
+                <h2>Температура: {{ temp }}</h2>
+                <h2>Давление: {{ pressure }} мм рт. ст.</h2>
+                <h2>Влажность: {{ humidity }} %</h2>
+                <h2>Скорость ветра: {{ wind }} м/с</h2>
+                <h2>Порывы ветра до {{ gust }} м/с</h2>
+                <h2>Восход {{ sunrise }}</h2>
+                <h2>Закат {{ sunset }}</h2>
+            </div>
+        </div>
+        {% include 'includes/footer.html' %}
+    </div>
+
+  </body>
+</html>
